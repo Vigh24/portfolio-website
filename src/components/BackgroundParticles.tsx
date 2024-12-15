@@ -11,54 +11,72 @@ const BackgroundParticles = () => {
   return (
     <Particles
       id="tsparticles"
-      className="fixed inset-0 -z-10" // This ensures particles stay behind content
+      className="!fixed inset-0"
       init={particlesInit}
       options={{
+        fullScreen: {
+          enable: true,
+          zIndex: -1
+        },
         background: {
           color: {
-            value: "#1a1f2e", // Dark background color
+            value: "#1a1f2e",
           },
         },
+        fpsLimit: 120,
         particles: {
           number: {
-            value: 60,
+            value: 100,
             density: {
               enable: true,
-              value_area: 1000,
+              value_area: 800,
             },
           },
           color: {
-            value: "#4B5563",
+            value: "#60A5FA",
           },
           shape: {
             type: "circle",
           },
           opacity: {
-            value: 0.25,
+            value: 0.3,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 1,
+              minimumValue: 0.1,
+              sync: false,
+            },
           },
           size: {
-            value: 1,
+            value: 3,
             random: true,
           },
           move: {
             enable: true,
-            speed: 0.5,
+            speed: 0.8,
             direction: "none",
-            random: true,
+            random: false,
             straight: false,
             outModes: {
               default: "bounce",
+            },
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
             },
           },
           links: {
             enable: true,
             distance: 150,
             color: "#60A5FA",
-            opacity: 0.15,
+            opacity: 0.2,
             width: 1,
           },
         },
         interactivity: {
+          detect_on: "canvas",
           events: {
             onHover: {
               enable: true,
@@ -68,12 +86,13 @@ const BackgroundParticles = () => {
               enable: true,
               mode: "push",
             },
+            resize: true,
           },
           modes: {
             grab: {
               distance: 140,
               links: {
-                opacity: 0.3,
+                opacity: 0.5,
               },
             },
             push: {
@@ -81,6 +100,7 @@ const BackgroundParticles = () => {
             },
           },
         },
+        retina_detect: true,
       }}
     />
   );

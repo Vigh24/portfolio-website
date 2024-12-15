@@ -16,12 +16,13 @@ import './styles/animations.css';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#1a1f2e] text-gray-900 dark:text-white transition-colors duration-300">
+    <div className="relative min-h-screen text-gray-900 dark:text-white">
+      <div className="fixed inset-0 bg-[#1a1f2e]" />
       <BackgroundParticles />
       <div className="relative z-10">
         <ScrollProgressBar />
         <Header />
-        <main>
+        <main className="relative">
           <Hero />
           <About />
           <Education />
@@ -30,7 +31,7 @@ function App() {
           <Skills />
           <Contact />
         </main>
-        <footer className="bg-transparent py-8 transition-colors duration-300">
+        <footer className="relative py-8">
           <div className="container mx-auto px-6 text-center">
             <p className="text-gray-400">
               &copy; {new Date().getFullYear()} Vighnesh Patil. All rights reserved.
