@@ -18,6 +18,17 @@
   to { opacity: 1; transform: scale(1); }
 }
 
+@keyframes slideDown {
+  from { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
@@ -60,4 +71,31 @@
     transform: none;
     animation: none;
   }
+}
+
+.mobile-menu-item {
+  opacity: 0;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Stagger animation delays for menu items */
+.mobile-menu-item:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-item:nth-child(2) { animation-delay: 0.15s; }
+.mobile-menu-item:nth-child(3) { animation-delay: 0.2s; }
+.mobile-menu-item:nth-child(4) { animation-delay: 0.25s; }
+.mobile-menu-item:nth-child(5) { animation-delay: 0.3s; }
+.mobile-menu-item:nth-child(6) { animation-delay: 0.35s; }
+
+/* Smooth transition for menu open/close */
+.mobile-menu-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add hover effect animation */
+.menu-item-hover {
+  transition: transform 0.2s ease;
+}
+
+.menu-item-hover:hover {
+  transform: translateX(8px);
 }
