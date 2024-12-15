@@ -8,7 +8,7 @@ const Education = () => {
         <div className="max-w-3xl mx-auto">
           <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 sm:p-6 mb-8 animate-slide-left">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">B.E. in Electronics and Telecommunication</h3>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">University Name • 2019-2023</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">Pillai College of Engineering • 2020-2024</p>
             <ul className="mt-4 space-y-3 text-gray-700 dark:text-gray-300">
               <li className="flex">
                 <span className="mr-2">•</span>
@@ -20,7 +20,7 @@ const Education = () => {
               </li>
               <li className="flex">
                 <span className="mr-2">•</span>
-                <span>Final Year Project: IoT-based Smart Home Automation System</span>
+                <span>Final Year Project: Safe Ride - Motorbike Crash Detection System</span>
               </li>
             </ul>
           </div>
