@@ -8,21 +8,6 @@ import ImagePreview from './ImagePreview';
 
 const Projects = () => {
   const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
-  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
-
-  const handleImageHover = (src: string, alt: string) => {
-    const timeout = setTimeout(() => {
-      setPreviewImage({ src, alt });
-    }, 1000); // 1 second delay
-    setHoverTimeout(timeout);
-  };
-
-  const handleImageLeave = () => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-      setHoverTimeout(null);
-    }
-  };
 
   const projects = [
     {
@@ -76,9 +61,8 @@ const Projects = () => {
                 ${index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right'} delay-${(index + 1) * 100}`}
             >
               <div 
-                className="relative h-48 sm:h-56 overflow-hidden group"
-                onMouseEnter={() => handleImageHover(project.image, project.title)}
-                onMouseLeave={handleImageLeave}
+                className="relative h-48 sm:h-56 overflow-hidden group cursor-pointer"
+                onClick={() => setPreviewImage({ src: project.image, alt: project.title })}
               >
                 <img
                   src={project.image}
