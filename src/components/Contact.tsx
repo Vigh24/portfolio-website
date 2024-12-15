@@ -15,11 +15,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden">
-      <ContactParticles />
+    <section id="contact" className="relative py-20 bg-gray-50/50 dark:bg-gray-800/50 overflow-hidden">
+      <div className="absolute inset-0">
+        <ContactParticles />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent dark:from-blue-400/10" />
       
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white animate-fade-in">
           Get in Touch
         </h2>
