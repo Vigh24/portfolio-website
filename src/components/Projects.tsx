@@ -2,7 +2,7 @@ import React from 'react';
 import { Github, ExternalLink, Lock } from 'lucide-react';
 import dashboardImg from '../assets/images/dashboard-dark.png';
 import apniBhashaImg from '../assets/images/apni-bhasha.png';
-import softphoneImg from '../assets/images/softphone.PNG';
+import softphoneImg from '../assets/images/softphone.png';
 import safeRideImg from '../assets/images/Safe-Ride.png';
 
 const Projects = () => {
