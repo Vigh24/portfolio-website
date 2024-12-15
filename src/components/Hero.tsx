@@ -2,6 +2,12 @@ import React from 'react';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
+  const workspaceImages = [
+    "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1000&q=80", // Clean code on dark screen
+    "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1000&q=80", // Developer workspace with code
+    "https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=1000&q=80", // Modern workspace with multiple monitors
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 sm:pt-24 pb-12 overflow-hidden bg-transparent">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent dark:from-blue-400/10" />
@@ -67,7 +73,7 @@ const Hero = () => {
             <div className="relative max-w-lg mx-auto">
               <div className="absolute -inset-4 bg-blue-500/20 dark:bg-blue-400/20 rounded-lg blur-lg"></div>
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                src={workspaceImages[0]}
                 alt="Developer workspace"
                 className="relative rounded-lg shadow-2xl w-full transform hover:scale-[1.02] transition-transform duration-500"
               />
