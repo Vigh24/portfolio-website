@@ -1,6 +1,5 @@
 import React from 'react';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
-import heroImage from '../assets/images/a-cinematic-composition-of-a-professiona_bcQbnGkARDqmT7G8ljJ3xg_xw9Ml_FLTjm7HpgZp42icQ.jpeg';
 
 const Hero = () => {
   return (
@@ -68,7 +67,7 @@ const Hero = () => {
             <div className="relative max-w-lg mx-auto">
               <div className="absolute -inset-4 bg-blue-500/20 dark:bg-blue-400/20 rounded-lg blur-lg"></div>
               <img
-                src={heroImage}
+                src="/images/hero-image.jpeg"
                 alt="Developer workspace with glowing circuit traces"
                 className="relative rounded-lg shadow-2xl w-full transform hover:scale-[1.02] transition-transform duration-500"
               />
