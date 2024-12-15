@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +53,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white
                           transition-all duration-300 transform hover:translate-x-2
-                          ${isMenuOpen ? 'animate-slide-left' : ''}`}
+                          mobile-menu-item`}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {link.label}
@@ -65,7 +65,7 @@ const Header = () => {
               <a
                 href="/resume.pdf"
                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg 
-                         hover:bg-blue-700 transition-colors animate-fade-in"
+                         hover:bg-blue-700 transition-colors mobile-menu-item"
                 style={{ animationDelay: '300ms' }}
               >
                 <Download className="w-5 h-5 mr-2" />
