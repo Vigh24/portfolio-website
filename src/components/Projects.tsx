@@ -1,5 +1,9 @@
 import React from 'react';
 import { Github, ExternalLink, Lock } from 'lucide-react';
+import dashboardImg from '../assets/images/dashboard-dark.png';
+import apniBhashaImg from '../assets/images/apni-bhasha.png';
+import softphoneImg from '../assets/images/softphone.PNG';
+import safeRideImg from '../assets/images/Safe-Ride.png';
 
 const Projects = () => {
   const projects = [
@@ -8,27 +12,27 @@ const Projects = () => {
       description: "Real-time dashboard for monitoring IoT sensor data with advanced visualization features. Includes real-time data visualization, multiple sensor support, interactive charts and graphs, data export functionality, and customizable dashboard layouts.",
       technologies: ["React", "Material-UI", "Node.js", "Express", "WebSocket", "MongoDB"],
       github: "github.com/Vigh24/iot-sensor-dashboard",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+      image: dashboardImg
     },
     {
       title: "Apni Bhasha - Screen Translation App",
       description: "Android application for real-time screen translation. Features include real-time screen translation, support for multiple languages, floating translation button, interactive translation overlays, and privacy-focused design.",
       technologies: ["Kotlin", "Android SDK", "ML Kit", "Google Cloud Translation API"],
       github: "github.com/Vigh24/apnibhasha",
-      image: "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?auto=format&fit=crop&w=800&q=80"
+      image: apniBhashaImg
     },
     {
       title: "VoIP Softphone Application",
       description: "Feature-rich VoIP softphone application with multiple line support, call transfer, hold/resume, mute, screen sharing, and call recording. Supports multiple audio and video codecs. Implemented advanced features like call quality monitoring, network adaptation, and secure communication protocols for enterprise-level deployments.",
       technologies: ["C#", "Windows Forms", "VoIP Protocols", "Audio/Video Codecs"],
-      image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=800&q=80",
+      image: softphoneImg,
       isCompanyProject: true
     },
     {
       title: "Motorcycle Safety System",
       description: "Smart motorcycle safety system using Bluetooth sensors. Features real-time accident detection, location tracking, emergency SOS system, medical information display, and emergency contact notification.",
       technologies: ["Android Studio", "Java", "Bluetooth LE", "GPS"],
-      image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80",
+      image: safeRideImg,
       github: "github.com/Vigh24/motorcycle-safety-system"
     },
     {
