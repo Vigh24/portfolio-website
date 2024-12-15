@@ -1,11 +1,29 @@
-import React from 'react';
-import { Github, ExternalLink, Lock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, ExternalLink, Lock, Search } from 'lucide-react';
 import dashboardImg from '../assets/images/dashboard-dark.png';
 import apniBhashaImg from '../assets/images/apni-bhasha.png';
 import softphoneImg from '../assets/images/softphone.png';
 import safeRideImg from '../assets/images/Safe-Ride.png';
+import ImagePreview from './ImagePreview';
 
 const Projects = () => {
+  const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  const handleImageHover = (src: string, alt: string) => {
+    const timeout = setTimeout(() => {
+      setPreviewImage({ src, alt });
+    }, 1000); // 1 second delay
+    setHoverTimeout(timeout);
+  };
+
+  const handleImageLeave = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+  };
+
   const projects = [
     {
       title: "IoT Sensor Dashboard",
@@ -57,12 +75,19 @@ const Projects = () => {
               className={`bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 
                 ${index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right'} delay-${(index + 1) * 100}`}
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              <div 
+                className="relative h-48 sm:h-56 overflow-hidden group"
+                onMouseEnter={() => handleImageHover(project.image, project.title)}
+                onMouseLeave={handleImageLeave}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Search className="w-8 h-8 text-white" />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
@@ -100,6 +125,13 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      <ImagePreview
+        src={previewImage?.src || ''}
+        alt={previewImage?.alt || ''}
+        isOpen={!!previewImage}
+        onClose={() => setPreviewImage(null)}
+      />
     </section>
   );
 };
