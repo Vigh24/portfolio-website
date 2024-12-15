@@ -1,11 +1,9 @@
 import React from 'react';
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
-import ParticlesBackground from './ParticlesBackground';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 sm:pt-24 pb-12 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <ParticlesBackground />
+    <section className="relative min-h-screen flex items-center pt-20 sm:pt-24 pb-12 overflow-hidden bg-transparent">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent dark:from-blue-400/10" />
       
       <div className="container mx-auto px-4 sm:px-6 relative">
