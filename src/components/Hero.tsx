@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white animate-fade-in">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 dark:text-white animate-fade-in">
                 Vighnesh Patil
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-lg mx-auto md:mx-0 animate-fade-in delay-200">

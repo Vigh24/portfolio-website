@@ -17,7 +17,7 @@ import './styles/animations.css';
 function App() {
   return (
     <div className="relative min-h-screen text-gray-900 dark:text-white">
-      <div className="fixed inset-0 bg-[#1a1f2e]" />
+      <div className="fixed inset-0 bg-gray-50 dark:bg-[#1a1f2e]" />
       <BackgroundParticles />
       <div className="relative z-10">
         <ScrollProgressBar />

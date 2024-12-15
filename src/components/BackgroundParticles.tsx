@@ -20,7 +20,7 @@ const BackgroundParticles = () => {
         },
         background: {
           color: {
-            value: "#1a1f2e",
+            value: "transparent",
           },
         },
         fpsLimit: 120,
@@ -33,7 +33,7 @@ const BackgroundParticles = () => {
             },
           },
           color: {
-            value: "#60A5FA",
+            value: ["#1E40AF", "#60A5FA"],
           },
           shape: {
             type: "circle",
